@@ -1,0 +1,48 @@
+Table categories {
+  id integer [pk, increment]
+  name text [not null, unique]
+}
+
+Table books {
+  id integer [pk, increment]
+  title text [not null]
+  price real [not null]
+  rating integer
+  category_id integer [not null]
+  upc text
+  description text
+
+  Indexes {
+    category_id
+  }
+}
+
+Table authors {
+  id integer [pk, increment]
+  name text [not null]
+  birth_year integer
+  country text
+  external_api_id text
+  total_known_works integer
+  api_source text [not null]
+  created_at text [default: `CURRENT_TIMESTAMP`]
+
+  Indexes {
+    external_api_id
+  }
+}
+
+Table book_author {
+  book_id integer [not null]
+  author_id integer [not null]
+
+  Indexes {
+    (book_id, author_id) [pk]
+    book_id
+    author_id
+  }
+}
+
+Ref: books.category_id > categories.id
+Ref: book_author.book_id > books.id
+Ref: book_author.author_id > authors.id
