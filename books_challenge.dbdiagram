@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "detailLevel": "All",
+  "tablePositions": [
+    {
+      "name": "categories",
+      "schemaName": "public",
+      "x": 15.8623046875,
+      "y": 15
+    },
+    {
+      "name": "books",
+      "schemaName": "public",
+      "x": 508.2724609375,
+      "y": 154
+    },
+    {
+      "name": "authors",
+      "schemaName": "public",
+      "x": 12,
+      "y": 154
+    },
+    {
+      "name": "book_author",
+      "schemaName": "public",
+      "x": 12,
+      "y": 493
+    }
+  ],
+  "tableGroupCollapseStates": [],
+  "stickyNoteLayouts": [],
+  "referencePaths": []
+}
